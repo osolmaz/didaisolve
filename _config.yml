@@ -1,7 +1,7 @@
 title: "Did AI Solve?"
 description: "A website tracking whether AI has solved major open problems in math, science, and beyond."
-baseurl: ""    # For GitHub Pages project site, set to "/didaisolve" if needed
-url: "https://your-username.github.io"  # or your custom domain if you've set it
+baseurl: "/didaisolve"
+url: "https://osolmaz.github.io"
 
 # Add these new settings
 permalink: "pretty"
