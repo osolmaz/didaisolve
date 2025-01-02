@@ -26,10 +26,36 @@ title: Home
       <tbody>
         {% assign problems_list = site.problems %}
         {% for p in problems_list %}
+          {% if p.status != "Solved" %}
+          <tr>
+            <td><a href="{{ p.url }}">{{ p.title }}</a></td>
+            <td>{{ p.status | default: "Unknown" }}</td>
+          </tr>
+          {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <hr>
+
+    <h2>Solved Problems</h2>
+
+    <table>
+      <thead>
         <tr>
-          <td><a href="{{ p.url }}">{{ p.title }}</a></td>
-          <td>{{ p.status | default: "Unknown" }}</td>
+          <th>Problem</th>
+          <th>Date Solved</th>
         </tr>
+      </thead>
+      <tbody>
+        {% assign problems_list = site.problems %}
+        {% for p in problems_list %}
+          {% if p.status == "Solved" %}
+          <tr>
+            <td><a href="{{ p.url }}">{{ p.title }}</a></td>
+            <td>{{ p.date_solved | default: "Unknown" }}</td>
+          </tr>
+          {% endif %}
         {% endfor %}
       </tbody>
     </table>

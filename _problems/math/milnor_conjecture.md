@@ -9,6 +9,3 @@ solver: Vladimir Voevodsky
 notes:
 ---
 The Milnor conjecture in algebraic K-theory relates the Milnor K-theory of a field to its Galois cohomology. Vladimir Voevodsky proved this conjecture using advanced techniques in algebraic geometry and motivated further developments in the field.
-
-
-Notes:
