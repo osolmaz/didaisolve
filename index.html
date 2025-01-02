@@ -1,23 +1,8 @@
+---
+layout: default
+title: Home
+---
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Home | Did AI Solve?</title>
-  <meta name="description" content="A website tracking whether AI has solved major open problems in math, science, and beyond.">
-  <link rel="stylesheet" href="/assets/styles.css">
-</head>
-<body>
-  <header>
-    <h1><a href="/">Did AI Solve?</a></h1>
-    <nav>
-      <a href="/">Home</a> |
-      <a href="/about">About</a>
-    </nav>
-    <hr>
-  </header>
-
-  <main>
-    <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -39,13 +24,13 @@
         </tr>
       </thead>
       <tbody>
-        
-        
+        {% assign problems_list = site.problems %}
+        {% for p in problems_list %}
         <tr>
-          <td><a href="/problems/math/collatz_conjecture/">Collatz Conjecture</a></td>
-          <td>Unsolved</td>
+          <td><a href="{{ p.url }}">{{ p.title }}</a></td>
+          <td>{{ p.status | default: "Unknown" }}</td>
         </tr>
-        
+        {% endfor %}
       </tbody>
     </table>
 
@@ -54,14 +39,6 @@
     <h2>About This Project</h2>
 
     <p>"Did AI Solve?" tracks major open problems across disciplines—math, physics, biology, etc.—and monitors whether advanced AI systems (like those from OpenAI) have made decisive breakthroughs. We automatically update the status of each problem as news emerges.</p>
-  </main>
-
-  <footer>
-    <hr>
-    <p>&copy; 2025 - Did AI Solve?</p>
-  </footer>
-</body>
-</html>
   </main>
 
   <footer>
