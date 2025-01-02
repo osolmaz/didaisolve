@@ -1,0 +1,25 @@
+title: "Did AI Solve?"
+description: "A website tracking whether AI has solved major open problems in math, science, and beyond."
+baseurl: ""    # For GitHub Pages project site, set to "/didaisolve" if needed
+url: "https://your-username.github.io"  # or your custom domain if you've set it
+
+# Add these new settings
+permalink: "pretty"
+markdown: kramdown
+
+collections:
+  problems:
+    output: true
+
+# Where Jekyll should look for pages
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Optional: Exclude files or directories from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock

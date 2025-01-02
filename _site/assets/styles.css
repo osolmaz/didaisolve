@@ -1,0 +1,24 @@
+body {
+  margin: 0 auto;       /* center the page */
+  max-width: 800px;     /* limit the content width */
+  font-family: sans-serif;
+  line-height: 1.4;
+  padding: 1rem;
+}
+
+header, footer {
+  margin-bottom: 1rem;
+}
+
+hr {
+  margin: 1rem 0;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.5rem;
+}

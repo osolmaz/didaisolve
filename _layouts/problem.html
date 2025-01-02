@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<article>
+  <h2>{{ page.title }}</h2>
+
+  <p><strong>Status:</strong> {{ page.status | default:"Unknown" }}</p>
+  <p><strong>Wikipedia Link:</strong>
+    <a href="{{ page.wiki_url }}" target="_blank">{{ page.wiki_url }}</a></p>
+
+  {% if page.problem_posed %}
+    <p><strong>Problem Posed:</strong> {{ page.problem_posed }}</p>
+  {% endif %}
+
+  {% if page.date_solved %}
+    <p><strong>Date Solved:</strong> {{ page.date_solved }}</p>
+  {% endif %}
+
+  {% if page.solver %}
+    <p><strong>Solver:</strong> {{ page.solver }}</p>
+  {% endif %}
+
+  {% if page.notes %}
+    <p><strong>Notes:</strong> {{ page.notes }}</p>
+  {% endif %}
+
+  <hr>
+  <div>
+    {{ content }}
+  </div>
+</article>
