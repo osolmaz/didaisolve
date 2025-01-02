@@ -28,7 +28,7 @@ title: Home
         {% for p in problems_list %}
           {% if p.status != "Solved" %}
           <tr>
-            <td><a href="{{ p.url }}">{{ p.title }}</a></td>
+            <td><a href="{{ p.url | relative_url }}">{{ p.title }}</a></td>
             <td>{{ p.status | default: "Unknown" }}</td>
           </tr>
           {% endif %}
@@ -52,7 +52,7 @@ title: Home
         {% for p in problems_list %}
           {% if p.status == "Solved" %}
           <tr>
-            <td><a href="{{ p.url }}">{{ p.title }}</a></td>
+            <td><a href="{{ p.url | relative_url }}">{{ p.title }}</a></td>
             <td>{{ p.date_solved | default: "Unknown" }}</td>
           </tr>
           {% endif %}
