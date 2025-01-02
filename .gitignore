@@ -5,3 +5,5 @@ _site/
 *.aux
 *.log
 .DS_Store
+.env
+_site/
